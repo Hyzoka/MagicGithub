@@ -19,8 +19,7 @@ public class FakeApiService implements ApiService {
     @Override
     public void generateRandomUser() {
         User randomUser ;                         //initialisation
-        do { randomUser = User.random();}           //  génère un random user
-        while (users.contains(randomUser));         // check si l'élément exist via containts
+        randomUser = User.random();              //  génère un random user
         users.add(randomUser);                      // add l'élément crée à la liste
     }
 
